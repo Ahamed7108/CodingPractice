@@ -2,7 +2,7 @@ package leetcode;
 
 public class Sort0S1S2S {
     public static void main(String[] args) {
-        int sorted[]={0,1,2,0,1,2};
+        int sorted[]={2,2,2,1,1,0,1};
         int low=0;
         int high=sorted.length-1;
         int mid=0;
@@ -26,5 +26,6 @@ public class Sort0S1S2S {
                     break;
             }
         }
+        for(int k:sorted) System.out.print(k+" ");
     }
 }

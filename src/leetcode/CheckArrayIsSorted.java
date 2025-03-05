@@ -2,24 +2,21 @@ package leetcode;
 
 public class CheckArrayIsSorted {
     public static void main(String[] args) {
-        int arr[]={50,1,20,1};
-        int temp=arr[0];
-        boolean flag=false;
-        for(int i=1;i<arr.length;i++){
-            if (temp <= arr[i]) {
-                temp = arr[i];
-            }
-            else{
-                flag=true;
-                break;
-            }
-
-        }
-        if(flag){
-            System.out.println("Array is not sorted");
+        String str="abba";
+        long time=System.currentTimeMillis();
+        if(palindrome(str)){
+            System.out.println("palindrome");
         }
         else{
-            System.out.println("ARRAY IS SORTED");
+            System.out.println("not and palindrome");
         }
+        long time2=System.currentTimeMillis();
+        System.out.println(time2-time);
+    }
+
+    private static boolean palindrome(String str) {
+        if(str.length()==0||str.length()==1)return true;
+        if(str.charAt(0)==str.charAt(str.length()-1)) return palindrome(str.substring(1,str.length()-1));
+        return false;
     }
 }

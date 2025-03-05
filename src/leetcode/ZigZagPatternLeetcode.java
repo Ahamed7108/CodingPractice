@@ -1,9 +1,13 @@
 package leetcode;
 
+import java.util.LinkedHashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class ZigZagPatternLeetcode {
     public static void main(String[] args) {
+        Set<Character> set=new LinkedHashSet<>();
+
         Scanner s=new Scanner(System.in);
         String str = s.nextLine();
         int num=s.nextInt();

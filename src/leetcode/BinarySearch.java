@@ -5,7 +5,7 @@ public class BinarySearch {
         int arr[]={1,2,3,4,11,30,40};
         int start=0;
         int end=arr.length-1;
-        int target=5;
+        int target=5 ;
         int k=search(arr,start,end,target);
         System.out.println(k);
     }
